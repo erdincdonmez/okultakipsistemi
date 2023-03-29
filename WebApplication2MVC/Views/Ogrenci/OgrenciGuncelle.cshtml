@@ -1,0 +1,23 @@
+﻿@model Ogrenci
+@{
+	ViewData["Title"] = "Öğrenci Guncelle";
+}
+
+<h1>Öğrenci Güncelle</h1>
+
+<form asp-controller="Ogrenci" asp-action="OgrenciGuncelle" method="post">
+    <input type="hidden" asp-for="OgrenciId"/>
+    <div class="mb-3">
+        <label class="form-label">Öğrenci Adı</label>
+        <input class="form-control" type="text" asp-for="AdSoyad" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Sınıf</label>
+        <input class="form-control" type="text" asp-for="Sinifi" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Numarası</label>
+        <input class="form-control" type="text" asp-for="TC" />
+    </div>
+    <input type="submit" class="btn btn-success" value="Kaydet" />
+</form>

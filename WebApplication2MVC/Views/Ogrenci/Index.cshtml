@@ -1,0 +1,50 @@
+﻿@model List<Ogrenci>
+@{
+	//Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>Index</title>
+
+</head>
+<body>
+	<div class="col-md-10 text-center">
+        @*<div class="text-center">*@
+		<a class="btn col-md-3 form-control btn-outline-secondary" href="/">Geri dön</a>
+		<a class="btn col-md-3 form-control btn-outline-primary " href="/Ogrenci/OgrenciEkle">Öğrenci Ekle</a>
+		<a class="btn col-md-3 form-control btn-outline-warning " href="/Ogrenci/EkstraIslemler">Diğer örnekler</a>
+	</div>
+
+    <h1>Öğrenci Listesi</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Adı Soyadı</th>
+                <th>Sınıf</th>
+                <th>TC</th>
+                <th>İşlemler</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.AdSoyad</td>
+                    <td>@item.Sinifi</td>
+                    <td>@item.TC</td>
+                    <td>
+                        <a href="/Ogrenci/OgrenciSil/@item.OgrenciId" onclick="return confirm('Silmek istediğinizden emin misiniz?')" class="btn btn-sm btn-outline-danger">Sil</a>
+                        <a href="/Ogrenci/OgrenciGuncelle/@item.OgrenciId" class="btn btn-sm btn-outline-warning">Düzenle</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</body>
+</html>

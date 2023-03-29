@@ -1,0 +1,60 @@
+﻿@model infoDTO
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>OgrenciOgretmenBilgi</title>
+</head>
+<body>
+    <h1>Öğrenci + Öğretmen Bilgileri</h1>
+	<ul>
+		@for (int i = 0; i < 10; i++)
+		{
+			<li>
+				<a href="/Ogrenci/OgrenciOgretmenBilgi/@i">Öğrenci @i</a>
+
+			</li>
+		}
+	</ul>
+	@if (Model != null && Model.Ogrenci != null)
+	{
+		<p>
+			Öğrenci id : @Model.Ogrenci.OgrenciId
+		</p>
+		<p>
+			Öğrenci Adı Soyadı : @Model.Ogrenci.AdSoyad
+		</p>
+		<p>
+			Öğrenci Adı Soyadı : @Model.Ogrenci.TC
+		</p>
+	}
+	else
+	{
+		<p>
+			Öğrenci yok
+		</p>
+	}	@if (Model !=null && Model.Ogretmen != null)
+	{
+		<p>
+			Ogretmen id : @Model.Ogretmen.id
+		</p>
+		<p>
+			Ogretmen Adı Soyadı : @Model.Ogretmen.AdSoyad
+		</p>
+		<p>
+			Ogretmen Adı Soyadı : @Model.Ogretmen.Brans
+		</p>
+	}
+	else
+	{
+		<p>
+			Öğretmen yok
+		</p>
+	}
+</body>
+</html>

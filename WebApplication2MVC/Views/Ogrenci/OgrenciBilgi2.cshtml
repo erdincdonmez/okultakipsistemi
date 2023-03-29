@@ -1,0 +1,44 @@
+﻿@model Ogrenci
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>OgrenciBilgi2</title>
+</head>
+<body>
+    <h2>Öğrenci Bilgileri (model ile)</h2>
+	<ul>
+	@for (int i = 0; i < 10; i++)
+	{
+		<li>
+			<a href="/Ogrenci/OgrenciBilgi2/@i">Öğrenci @i</a>
+
+		</li>
+	}
+	</ul>
+	@if (Model != null)
+	{
+		<p>
+			Öğrenci OgrenciId : @Model.OgrenciId
+		</p>
+		<p>
+			Öğrenci Adı Soyadı : @Model.AdSoyad
+		</p>
+		<p>
+			Öğrenci Adı Soyadı : @Model.TC
+		</p>
+	}
+	else
+	{
+		<p>
+			Öğrenci yok
+		</p>
+	}
+
+</body>
+</html>

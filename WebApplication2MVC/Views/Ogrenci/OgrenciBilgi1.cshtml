@@ -1,0 +1,43 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>OgrenciBilgi1 (ViewBag)</title>
+</head>
+<body>
+	<h2>Öğrenci Bilgileri</h2>
+	<ul>
+		@for (int i = 0; i < 10; i++)
+		{
+			<li>
+				<a href="/Ogrenci/OgrenciBilgi1/@i">Öğrenci @i</a>
+
+			</li>
+		}
+	</ul>
+	@if (ViewBag.Student != null)
+	{
+		<p>
+			Öğrenci id : @ViewBag.Student.id
+		</p>
+		<p>
+			Öğrenci Adı Soyadı : @ViewBag.Student.AdSoyad
+		</p>
+		<p>
+			Öğrenci Adı Soyadı : @ViewBag.Student.TC
+		</p>
+	}
+	else
+	{
+		<p>
+			Öğrenci yok
+		</p>
+	}
+</body>
+</html>

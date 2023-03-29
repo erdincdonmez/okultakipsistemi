@@ -1,0 +1,36 @@
+﻿@model Ogrenci
+@{
+	ViewData["Title"] = "Öğrenci Ekle";
+}
+
+<h1>Öğrenci Ekle</h1>
+
+<form asp-controller="Ogrenci" asp-action="OgrenciEkle" method="post">
+    <div class="mb-3">
+        <label class="form-label">Öğrenci Adı</label>
+        <input class="form-control" type="text" asp-for="AdSoyad" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Sınıf</label>
+        <input class="form-control" type="text" asp-for="Sinifi" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Numarası</label>
+        <input class="form-control" type="text" asp-for="TC" />
+    </div>
+    <input type="submit" class="btn btn-success" value="Kaydet" />
+</form>
+
+@*VVV Önceki şekli VVV*@
+@*<form action="/Ogrenci/OgrenciEkle" method="post">
+	<div class="mb-3">
+		<label class="col-form-label">Öğrenci Adı Soyadı:</label>
+		<input class="form-control" type="text" />
+	</div>
+	<div class="mb-3">
+		<label class="col-form-label">Öğrenci TC:</label>
+		<input class="form-control" type="text" />
+	</div>
+	<button class="btn btn-outline-success">Kaydet</button>
+</form>*@
+

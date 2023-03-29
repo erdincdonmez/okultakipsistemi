@@ -1,0 +1,53 @@
+﻿@using WebApplication2MVC.Models
+@using WebApplication2MVC.Controllers
+@{
+	Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>OgrenciBilgi</title>
+</head>
+<body>
+	<h2>Öğrenci Bilgileri (ViewData ile)</h2>
+	<ul>
+		@for (int i = 0; i < 10; i++)
+		{
+			<li>
+				<a href="/Ogrenci/OgrenciBilgi/@i">Öğrenci @i</a>
+
+			</li>
+		}
+	</ul>
+	@if (ViewData["ogrenci"] != null)
+	{
+		<p>
+			Öğrenci OgrenciId : @(((Ogrenci)(ViewData["ogrenci"])).OgrenciId)
+		</p>
+		<p>
+			Öğrenci Adı Soyadı : @(((Ogrenci)(ViewData["ogrenci"])).AdSoyad)
+		</p>
+		<p>
+			Öğrenci Adı Soyadı : @(((Ogrenci)(ViewData["ogrenci"])).TC)
+		</p>
+	}
+	else
+	{
+		<p>
+			Öğrenci yok
+		</p>
+	}
+</body>
+</html>
+
+@*View Data : collection - Key Value pair
+Keyler tekil olmalıdır
+Object türünde veri taşır
+
+Viewbag arkapalnda arkaplanda viewdata collectionunu kullanır dolayısıyla view datada kullanılan key viewbagte kullanılmaz.
+Viewbag objet türünde veri taşır. View datadan farkı kendisi dinamic tir.
+Dinamic verilerin içeriği runtime esnasında tespit edilir.
+*@
