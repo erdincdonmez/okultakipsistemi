@@ -1,6 +1,6 @@
 # GAZİ ÜNİVERSİTESİ-BELTEK 68.DÖNEM BİTİRME PROJESİ
 
-![Alt text](~/projectscreenshoots/2023-03-29.png"Optional title")
+![Alt text]([~/projectscreenshoots/2023-03-29.png](https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Visual_Studio_Icon_2019.svg/1200px-Visual_Studio_Icon_2019.svg.png)"Optional title")
 ![Alt text](~/projectscreenshoots/2023-03-29.png"Optional title")
 ![Alt text](~/projectscreenshoots/2023-03-29 (1).png"Optional title")
 ![Alt text](~/projectscreenshoots/2023-03-29 (2).png "Optional title")
