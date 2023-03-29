@@ -7,6 +7,7 @@ namespace WebApplication2MVC.Models
     public class OkulDbContext : DbContext
     {
         public DbSet<Ogrenci> Ogrenciler { get; set; }
+        public DbSet<Ogretmen> Ogretmenler { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder dbAyarlari)
         {

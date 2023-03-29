@@ -1,0 +1,47 @@
+﻿@model List<Ogretmen>
+@{
+    //Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Öğretmen</title>
+
+</head>
+<body>
+    <div class="col-md-10 text-center">
+        <a class="btn col-md-3 form-control btn-outline-secondary" href="/">Geri dön</a>
+        <a class="btn col-md-3 form-control btn-outline-primary " href="/Ogretmen/OgretmenEkle">Öğretmen Ekle</a>
+    </div>
+
+    <h1>Öğretmen Listesi</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Adı Soyadı</th>
+                <th>Branş</th>
+                <th>İşlemler</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.AdSoyad</td>
+                    <td>@item.Brans</td>
+                    <td>
+                        <a href="/Ogretmen/OgretmenSil/@item.Ogretmenid" onclick="return confirm('Silmek istediğinizden emin misiniz?')" class="btn btn-sm btn-outline-danger">Sil</a>
+                        <a href="/Ogretmen/OgretmenGuncelle/@item.Ogretmenid" class="btn btn-sm btn-outline-warning">Düzenle</a>
+                    </td>
+                </tr>
+            }
+            
+        </tbody>
+    </table>
+
+</body>
+</html>

@@ -151,12 +151,12 @@ namespace WebApplication2MVC.Controllers
             var ogr = new Ogrenci();
 
             var ogrt1 = new Ogretmen();
-            ogrt1.id = 1;
+            ogrt1.Ogretmenid = 1;
             ogrt1.AdSoyad = "Ali Akaö";
             ogrt1.Brans = "123234123ö";
 
             var ogrt2 = new Ogretmen();
-            ogrt2.id = 2;
+            ogrt2.Ogretmenid = 2;
             ogrt2.AdSoyad = "Veli Güllüö";
             ogrt2.Brans = "32659854ö";
 
