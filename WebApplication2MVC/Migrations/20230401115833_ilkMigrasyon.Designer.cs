@@ -9,8 +9,8 @@ using WebApplication2MVC.Models;
 namespace WebApplication2MVC.Migrations
 {
     [DbContext(typeof(OkulDbContext))]
-    [Migration("20230329184715_ogretmenSinifiEklendi")]
-    partial class ogretmenSinifiEklendi
+    [Migration("20230401115833_ilkMigrasyon")]
+    partial class ilkMigrasyon
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -24,19 +24,31 @@ namespace WebApplication2MVC.Migrations
                 {
                     b.Property<int>("OgrenciId")
                         .ValueGeneratedOnAdd()
+                        .HasMaxLength(5)
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("AdSoyad")
+                        .HasMaxLength(30)
+                        .HasColumnType("varchar(30)");
+
+                    b.Property<string>("Adi")
                         .IsRequired()
                         .HasMaxLength(30)
                         .HasColumnType("varchar(30)");
 
                     b.Property<string>("Sinifi")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(11)
+                        .HasColumnType("varchar(11)");
+
+                    b.Property<string>("Soyadi")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("varchar(30)");
 
                     b.Property<string>("TC")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(11)
+                        .HasColumnType("varchar(11)");
 
                     b.HasKey("OgrenciId");
 
@@ -47,18 +59,31 @@ namespace WebApplication2MVC.Migrations
                 {
                     b.Property<int>("Ogretmenid")
                         .ValueGeneratedOnAdd()
+                        .HasMaxLength(5)
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("AdSoyad")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(30)
+                        .HasColumnType("varchar(30)");
+
+                    b.Property<string>("Adi")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("varchar(30)");
 
                     b.Property<string>("Brans")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(11)
+                        .HasColumnType("varchar(11)");
+
+                    b.Property<string>("Soyadi")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("varchar(30)");
 
                     b.HasKey("Ogretmenid");
 
-                    b.ToTable("Ogretmenler");
+                    b.ToTable("tblOgretmenler");
                 });
 #pragma warning restore 612, 618
         }

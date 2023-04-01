@@ -22,7 +22,8 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Adı Soyadı</th>
+                <th>Adı</th>
+                <th>Soyadı</th>
                 <th>Branş</th>
                 <th>İşlemler</th>
             </tr>
@@ -31,7 +32,8 @@
             @foreach (var item in Model)
             {
                 <tr>
-                    <td>@item.AdSoyad</td>
+                    <td>@item.Adi</td>
+                    <td>@item.Soyadi</td>
                     <td>@item.Brans</td>
                     <td>
                         <a href="/Ogretmen/OgretmenSil/@item.Ogretmenid" onclick="return confirm('Silmek istediğinizden emin misiniz?')" class="btn btn-sm btn-outline-danger">Sil</a>

@@ -24,7 +24,8 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Adı Soyadı</th>
+                <th>Adı</th>
+                <th>Soyadı</th>
                 <th>Sınıf</th>
                 <th>TC</th>
                 <th>İşlemler</th>
@@ -34,7 +35,8 @@
             @foreach (var item in Model)
             {
                 <tr>
-                    <td>@item.AdSoyad</td>
+                    <td>@item.Adi</td>
+                    <td>@item.Soyadi</td>
                     <td>@item.Sinifi</td>
                     <td>@item.TC</td>
                     <td>
